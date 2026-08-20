@@ -1,0 +1,99 @@
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+  /* Container */
+  --container-mobile: 375px;
+  --container-desktop: 1440px;
+  /* Font */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  /* Text preset 1 */
+  --font-size-preset-1: 22px;
+  --line-height-preset-1: 120%;
+  --letter-spacing-preset-1: 0px;
+  --font-weight-preset-1: bold;
+  /* Text preset 2 */
+  --font-size-preset-2: 15px;
+  --line-height-preset-2: 140%;
+  --letter-spacing-preset-2: 0.2px;
+  --font-weight-preset-2: regular;
+  /* Spacing */
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  background-color: var(--slate-300);
+}
+img {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  max-width: var(--container-desktop);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 320px;
+  background-color: var(--white);
+  padding: var(--spacing-200) var(--spacing-200) var(--spacing-500)
+    var(--spacing-200);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+  text-align: center;
+}
+.card__image {
+  width: 288px;
+  height: 288px;
+  border-radius: 10px;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  padding: 0 var(--spacing-200);
+}
+.card__title {
+  font-size: var(--font-size-preset-1);
+  line-height: var(--line-height-preset-1);
+  letter-spacing: var(--letter-spacing-preset-1);
+  font-weight: var(--font-weight-preset-1);
+  color: var(--slate-900);
+}
+.card__description {
+  font-size: var(--font-size-preset-2);
+  line-height: var(--line-height-preset-2);
+  letter-spacing: var(--letter-spacing-preset-2);
+  font-weight: var(--font-weight-preset-2);
+  color: var(--slate-500);
+}
+/* Attribution */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: var(--container-mobile);
+  }
+}
